@@ -17,7 +17,7 @@ let remindersController = {
     let searchResult = database.cindy.reminders.find(function (reminder) {
       return reminder.id == reminderToFind;
     })
-    if (searchResult != undefined) {
+    if (searchResult !== undefined) {
       res.render('reminder/single-reminder', { reminderItem: searchResult })
     } else {
       res.render('reminder/index', { reminders: database.cindy.reminders })
@@ -31,12 +31,11 @@ let remindersController = {
       id: database.cindy.reminders.length + 1,
       title: req.body.title,
       description: req.body.description,
-      completed: false
+      completed: 'false'
     }
     database.cindy.reminders.push(reminder);
     res.redirect('/reminders');
   },
-
   // Show the Edit Reminder Page
   edit: (req, res) => {
     // ⭐️ your implementation here ⭐️
@@ -45,19 +44,27 @@ let remindersController = {
   // Edit the Reminder
   update: (req, res) => {
     // ⭐️ your implementation here ⭐️
+    let reminderToFind = req.params.id;
+    let searchResult = database.cindy.reminders.find(function (reminder) {
+      return reminder.id == reminderToFind;
+    })
+    let removeIndex = database.cindy.reminders.map(function(item) { return item.id; }).indexOf(searchResult.id);
+    database.cindy.reminders.splice(removeIndex, 1)
+    let reminder = {
+      id: database.cindy.reminders.length,
+      title: req.body.title,
+      description: req.body.description,
+      completed: req.body.completed
+    }
+    console.log(reminder)
+    database.cindy.reminders.push(reminder);
+    console.log(database.cindy.reminders)
+    res.redirect('/reminders');
   },
 
   // Delete the Reminder
   delete: (req, res) => {
-  // ⭐️ your implementation here ⭐️
-      let reminderToDelete = req.params.id;
-      for (let i=0; i<database.cindy.reminders.length; i++){
-        if (database.cindy.reminders[i].id == reminderToDelete){
-          database.cindy.reminders.splice(i,1)
-        }
-      }
-      res.redirect('/reminders')
+    // ⭐️ your implementation here ⭐️
   }
 }
-
 module.exports = remindersController;
