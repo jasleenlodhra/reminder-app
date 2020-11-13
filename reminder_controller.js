@@ -38,18 +38,18 @@ let remindersController = {
   },
 
   // Show the Edit Reminder Page
-  edit: (req, res) => {
-    // ⭐️ your implementation here ⭐️
-  },
-
-  // Edit the Reminder
-  update: (req, res) => {
+  edit: function(req, res) {
     // ⭐️ your implementation here ⭐️
     let reminderToFind = req.params.id;
     let searchResult = database.cindy.reminders.find(function (reminder) {
       return reminder.id == reminderToFind;
     })
     res.render('reminder/edit', { reminderItem: searchResult })
+  },
+
+  // Edit the Reminder
+  update: (req, res) => {
+    // ⭐️ your implementation here ⭐️
   },
 
   // Delete the Reminder
