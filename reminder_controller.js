@@ -45,11 +45,16 @@ let remindersController = {
   // Edit the Reminder
   update: (req, res) => {
     // ⭐️ your implementation here ⭐️
+    let reminderToFind = req.params.id;
+    let searchResult = database.cindy.reminders.find(function (reminder) {
+      return reminder.id == reminderToFind;
+    })
+    res.render('reminder/edit', { reminderItem: searchResult })
   },
 
   // Delete the Reminder
   delete: (req, res) => {
-  //   // ⭐️ your implementation here ⭐️
+    // ⭐️ your implementation here ⭐️
     let reminderToDelete = req.params.id;
     for (let i=0; i<database.cindy.reminders.length; i++){
       if (database.cindy.reminders[i].id == reminderToDelete){
