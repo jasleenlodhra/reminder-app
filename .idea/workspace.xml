@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ed71a9-23d6-4523-b73d-83d18e6cf86c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +53,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605236518726</updated>
-      <workItem from="1605236519818" duration="1964000" />
+      <workItem from="1605236519818" duration="2807000" />
+      <workItem from="1605557269876" duration="293000" />
+      <workItem from="1605557701279" duration="829000" />
     </task>
     <servers />
   </component>
@@ -67,23 +72,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1605236576725">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1605239513392">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513392" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576725" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1605236576722">
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1605239513391">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513391" />
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576722" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1605236576721">
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1605239513391">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513391" />
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576721" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1605236576724">
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1605239513392">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513392" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576724" />
+    <state x="420" y="170" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605239508208">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="420" y="170" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239508208" />
   </component>
 </project>
