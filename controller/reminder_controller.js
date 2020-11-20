@@ -32,7 +32,7 @@ let remindersController = {
       id: database.cindy.reminders.length + 1,
       title: req.body.title,
       description: req.body.description,
-      completed: 'false'
+      completed: false
     }
     database.cindy.reminders.push(reminder);
     res.locals.page = 'reminder list'
@@ -62,7 +62,7 @@ let remindersController = {
       id: database.cindy.reminders.length,
       title: req.body.title,
       description: req.body.description,
-      completed: req.body.completed
+      completed: req.body.completed == "true"
     }
     console.log(reminder)
     database.cindy.reminders.push(reminder);
