@@ -5,11 +5,12 @@
     <li class="list-group-item">
       <h3><strong><%= reminderItem.title %>: </strong></h3>
       <h4><%= reminderItem.description %></h4>
-      <h4>Completed:
+      <h4>tags: <%= reminderItem.tags %></h4>
+      <h4>completed:
         <% if (reminderItem.completed == true) { %>
-        <span class="label label-success">True</span>
+        <span class="badge badge-success">True</span>
         <% } else if (reminderItem.completed == false) { %>
-        <span class="label label-danger">False</span>
+        <span class="badge badge-danger">False</span>
         <% } %>
       </h4>
 
