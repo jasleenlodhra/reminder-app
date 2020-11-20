@@ -8,7 +8,8 @@ let remindersController = {
 
   // Show a Create Reminder Page
   new: (req, res) => {
-    res.render('reminder/create')
+    res.locals.page = 'create';
+    res.render('reminder/create');
   },
 
   // Show the details of a Single Reminder
@@ -34,6 +35,7 @@ let remindersController = {
       completed: 'false'
     }
     database.cindy.reminders.push(reminder);
+    res.locals.page = 'reminder list'
     res.redirect('/reminders');
   },
 
