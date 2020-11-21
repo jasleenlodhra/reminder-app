@@ -5,10 +5,25 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/reminders">Reminder List</a>
-      <a class="nav-item nav-link" href="/reminder/new">Create</a>
-      <a class="nav-item nav-link" href="/login">Login</a>
-      <a class="nav-item nav-link" href="/register">Sign up</a>
+
+      <% if (locals.page == 'create') { %>
+        <a class="nav-item nav-link" href="/reminders">Reminder List</a>
+        <a class="nav-item nav-link active" href="/reminder/new">Create</a>
+
+      <% } else if (locals.page == 'register') { %>
+        <a hidden class="nav-item nav-link" href="/reminders">Reminder List</a>
+        <a hidden class="nav-item nav-link" href="/reminder/new">Create</a>
+
+      <% } else if (locals.page == 'login'){ %>
+        <a hidden class="nav-item nav-link" href="/reminders">Reminder List</a>
+        <a hidden class="nav-item nav-link" href="/reminder/new">Create</a>
+
+      <% } else { %>
+        <a class="nav-item nav-link active" href="/reminders">Reminder List</a>
+        <a class="nav-item nav-link" href="/reminder/new">Create</a>
+      <% } %>
+
     </div>
   </div>
 </nav>
+
