@@ -1,0 +1,108 @@
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: black;
+        background-size: cover;
+    }
+
+    .login-box{
+        width: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:white;
+    }
+
+    .login-box h1{
+        float: left;
+        font-size: 40px;
+        border-bottom: 7px solid #a9cc0f;
+        margin-bottom: 40px;
+        padding: 0px 0
+    }
+
+    .links{
+        float:left;
+        margin-bottom:25px;
+
+    }
+
+    .links a{
+        float: left;
+        font-size: 12px;
+        padding: 0px;
+        color : white!important;
+        text-decoration: none;
+    }
+
+    .links a:hover{
+        border-bottom: 1px solid #a9cc0f;
+        text-decoration: none;
+    }
+
+    .textbox{
+        width: 100%;
+        overflow: hidden;
+        font-size: 20px;
+        padding: 8px 0;
+        margin: 8px 0;
+        border-bottom: 1px solid #a9cc0f;
+    }
+
+    .textbox i{
+        width: 25px;
+        float: left;
+        text-align: center;
+        font-size: 1.2rem
+    }
+
+    .textbox input{
+        border: none;
+        outline: none;
+        background: none;
+        color:white;
+        font-size: 14px;
+        width: 80px;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .btn{
+        width: 100%;
+        background: none;
+        color: white;
+        padding: 20px;
+        transition: .25ms;
+    }
+
+    .btn:hover{
+        border-color:#a9cc0f
+    }
+
+</style>
+<body>
+<div class="container">
+<div class = "login-box">
+
+    <h1>Login</h1>
+
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" name="" value="">
+    </div>
+
+    <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="Password" placeholder="Password" name="" value="">
+    </div>
+    <div class="links">
+        <a href="#" >Need An Account?</a><br>
+        <a href="#"style="float:left!important;" >Forgot Your Password?</a>
+    </div>
+    <input class="btn" type="button" name="Sign In" value="Sign In">
+</div>
+</div>
+</body>
