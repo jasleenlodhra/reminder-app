@@ -8,14 +8,15 @@ let remindersController = {
 
   // Show a Create Reminder Page
   new: (req, res) => {
-    res.render('reminder/create')
+    res.locals.page = 'create';
+    res.render('reminder/create');
   },
 
   // Show the details of a Single Reminder
   listOne: (req, res) => {
     let reminderToFind = req.params.id;
     let searchResult = database.cindy.reminders.find(function (reminder) {
-      return reminder.id === reminderToFind;
+      return reminder.id == reminderToFind;
     })
     if (searchResult !== undefined) {
       res.render('reminder/single-reminder', { reminderItem: searchResult })
@@ -31,9 +32,11 @@ let remindersController = {
       id: database.cindy.reminders.length + 1,
       title: req.body.title,
       description: req.body.description,
-      completed: 'false'
+      tags: req.body.tags,
+      completed: false
     }
     database.cindy.reminders.push(reminder);
+    res.locals.page = 'reminder list'
     res.redirect('/reminders');
   },
 
@@ -42,7 +45,7 @@ let remindersController = {
     // ⭐️ your implementation here ⭐️
     let reminderToFind = req.params.id;
     let searchResult = database.cindy.reminders.find(function (reminder) {
-      return reminder.id === reminderToFind;
+      return reminder.id == reminderToFind;
     })
     res.render('reminder/edit', { reminderItem: searchResult })
   },
@@ -52,7 +55,7 @@ let remindersController = {
     // ⭐️ your implementation here ⭐️
     let reminderToFind = req.params.id;
     let searchResult = database.cindy.reminders.find(function (reminder) {
-      return reminder.id === reminderToFind;
+      return reminder.id == reminderToFind;
     })
     let removeIndex = database.cindy.reminders.map(function(item) { return item.id; }).indexOf(searchResult.id);
     database.cindy.reminders.splice(removeIndex, 1)
@@ -60,7 +63,8 @@ let remindersController = {
       id: database.cindy.reminders.length,
       title: req.body.title,
       description: req.body.description,
-      completed: req.body.completed
+      tags: req.body.tags,
+      completed: req.body.completed == "true"
     }
     console.log(reminder)
     database.cindy.reminders.push(reminder);
@@ -73,7 +77,7 @@ let remindersController = {
     // ⭐️ your implementation here ⭐️
     let reminderToDelete = req.params.id;
     for (let i=0; i<database.cindy.reminders.length; i++){
-      if (database.cindy.reminders[i].id === reminderToDelete){
+      if (database.cindy.reminders[i].id == reminderToDelete){
         database.cindy.reminders.splice(i,1)
       }
     }

@@ -4,7 +4,7 @@ let Database = {
     },
     alex: {
         reminders: []
-    },
+    } 
 }
 
 module.exports = Database;
