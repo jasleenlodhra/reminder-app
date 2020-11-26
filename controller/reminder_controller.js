@@ -6,7 +6,7 @@ let remindersController = {
     res.render('reminder/index', { reminders: database.cindy.reminders })
   },
 
-  // Add a Friend Page
+  // Add a Friends Page
   addFriendsPage: (req, res) => {
     let allUsers = Object.keys(database)
     res.render("reminder/friends", {allUsers});
@@ -14,11 +14,12 @@ let remindersController = {
 
   // Add Friend
   addFriend: (req, res) => {
-    console.log(req, query);
+    console.log(req.query);
     let friend = req.query.username;
     console.log(friend);
     // Insert into currently logged user's friends array
     database.cindy.friends.push(friend);
+    res.render("reminder/friends")
     // res.redirect('/reminder/' + reminderToFind)
   },
 
