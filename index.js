@@ -22,10 +22,11 @@ app.use(cookieSession ({
 app.set("view engine", "ejs");
 // Routes start here
 
-// Add Friends
+// Add/Remove Friends
 app.get("/reminder/friends", reminderController.addFriendsPage)
 // app.get("/addFriend/:username", reminderController.addFriend)
 app.get("/addFriend", reminderController.addFriend)
+// app.get("/removeFriend", reminderController.removeFriend)
 
 app.get("/reminders", reminderController.list)
 
