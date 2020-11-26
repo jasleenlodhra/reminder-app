@@ -6,6 +6,22 @@ let remindersController = {
     res.render('reminder/index', { reminders: database.cindy.reminders })
   },
 
+  // Add a Friend Page
+  addFriendsPage: (req, res) => {
+    let allUsers = Object.keys(database)
+    res.render("reminder/friends", {allUsers});
+  },
+
+  // Add Friend
+  addFriend: (req, res) => {
+    console.log(req, query);
+    let friend = req.query.username;
+    console.log(friend);
+    // Insert into currently logged user's friends array
+    database.cindy.friends.push(friend);
+    // res.redirect('/reminder/' + reminderToFind)
+  },
+
   // Show a Create Reminder Page
   new: (req, res) => {
     res.locals.page = 'create';
@@ -63,7 +79,7 @@ let remindersController = {
       id: database.cindy.reminders.length,
       title: req.body.title,
       description: req.body.description,
-      tags: req.body.tags,
+      tags: req.body.tags.split(","),
       completed: req.body.completed == "true"
     }
     console.log(reminder)

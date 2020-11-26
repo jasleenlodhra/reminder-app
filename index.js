@@ -22,7 +22,10 @@ app.use(cookieSession ({
 app.set("view engine", "ejs");
 // Routes start here
 
-app.get("/reminders", authCheck,reminderController.list)
+app.get("/reminder/friends", reminderController.addFriendsPage)
+app.get("/addFriend/:username", reminderController.addFriend)
+
+app.get("/reminders", reminderController.list)
 
 // Create a Reminder
 app.get("/reminder/new", reminderController.new)
