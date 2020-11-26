@@ -1,9 +1,11 @@
 let Database = {
     cindy: {
-        reminders: []
+        reminders: [],
+        friends: []
     },
     alex: {
-        reminders: []
+        reminders: [],
+        friends: []
     } 
 }
 

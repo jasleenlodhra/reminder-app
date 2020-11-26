@@ -22,8 +22,10 @@ app.use(cookieSession ({
 app.set("view engine", "ejs");
 // Routes start here
 
+// Add Friends
 app.get("/reminder/friends", reminderController.addFriendsPage)
-app.get("/addFriend/:username", reminderController.addFriend)
+// app.get("/addFriend/:username", reminderController.addFriend)
+app.get("/addFriend", reminderController.addFriend)
 
 app.get("/reminders", reminderController.list)
 
@@ -41,13 +43,10 @@ app.post("/reminder/update/:id", reminderController.update) // Edit the reminder
 // Delete a reminder
 app.post("/reminder/delete/:id", reminderController.delete)
 
-
+// Authentication
 app.get("/register", authController.register)
-
 app.get("/login", authController.login)
-
 app.post("/register", authController.registerSubmit)
-
 app.post("/login", authController.loginSubmit)
 
 
