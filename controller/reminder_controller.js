@@ -19,7 +19,8 @@ let remindersController = {
     console.log(friend);
     // Insert into currently logged user's friends array
     database.cindy.friends.push(friend);
-    res.render("reminder/friends")
+    console.log(database) // noice
+    res.render("reminder/addFriend", { friendList: database.cindy.friends})
     // res.redirect('/reminder/' + reminderToFind)
   },
 
