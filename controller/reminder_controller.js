@@ -72,15 +72,14 @@ let remindersController = {
       title: req.body.title,
       description: req.body.description,
       tags: req.body.tags,
+      subtasks: req.body.subtasks,
       completed: false
     }
     database[username].reminders.push(reminder);
     console.log(database)
     console.log(database[username].reminders)
-      subtasks: req.body.subtasks,
-      completed: false
-    }
-    database.cindy.reminders.push(reminder);
+    
+    // database.cindy.reminders.push(reminder);
     res.locals.page = 'reminder list'
     res.redirect('/reminders');
   },
