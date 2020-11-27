@@ -51,6 +51,7 @@ let remindersController = {
       title: req.body.title,
       description: req.body.description,
       tags: req.body.tags,
+      subtasks: req.body.subtasks,
       completed: false
     }
     database.cindy.reminders.push(reminder);
@@ -82,6 +83,7 @@ let remindersController = {
       title: req.body.title,
       description: req.body.description,
       tags: req.body.tags.split(","),
+      subtasks: req.body.subtasks.split(","),
       completed: req.body.completed == "true"
     }
     console.log(reminder)

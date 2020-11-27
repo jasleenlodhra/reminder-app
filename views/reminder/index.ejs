@@ -6,8 +6,8 @@
     <li class="list-group-item">
       <strong><%= reminderItem.title %>: </strong>
       <%= reminderItem.description %>
-      || <strong>Tags:</strong> <%= reminderItem.tags %> || <strong>Completed:</strong>
-      <% if (reminderItem.completed == true) { %>
+      || <strong>Tags:</strong> <%= reminderItem.tags %> || <strong>Subtasks:</strong> <%= reminderItem.subtasks %> || <strong>Completed:</strong>
+    <% if (reminderItem.completed == true) { %>
         <span class="badge badge-success">True</span>
       <% } else if (reminderItem.completed == false) { %>
         <span class="badge badge-danger">False</span>
