@@ -1,4 +1,22 @@
-<form method="GET" action="/addFriend">
-    <input placeholder="Enter a username" type="text" name="username"/>
-    <input type="submit" value="Add Friend" class="btn btn-secondary"/>
-</form>
+<div class="container">
+    <h1 class="page-header">Add or Remove a Friend</h1>
+    <div>
+        <h4>Available Friends:</h4>
+        <h3><strong><% allUsers.forEach(function (friend) { %> </strong></h3>
+            <p><%= friend %></p>
+            <% }) %>
+    </div>
+    <div class=form-group>
+        <form method="GET" action="/updateFriend">
+            <input placeholder="Enter a username" type="text" name="username"/>
+            <input type="submit" value="Add Friend" class="btn btn-success"/>
+        </form>
+    </div>
+    <div class=form-group>
+        <form method="GET" action="/updateFriend">
+            <input placeholder="Enter a username" type="text" name="username"/>
+            <input type="submit" value="Remove Friend" class="btn btn-danger"/>
+        </form>
+    </div>
+
+  </div>

@@ -23,10 +23,10 @@ app.set("view engine", "ejs");
 // Routes start here
 
 // Add/Remove Friends
-app.get("/reminder/friends", reminderController.addFriendsPage)
+app.get("/reminder/friends", reminderController.updateFriendsPage)
 // app.get("/addFriend/:username", reminderController.addFriend)
-app.get("/addFriend", reminderController.addFriend)
-// app.get("/removeFriend", reminderController.removeFriend)
+app.get("/updateFriend", reminderController.addFriend)
+app.get("/updateFriend", reminderController.removeFriend)
 
 app.get("/reminders", authCheck,reminderController.list)
 

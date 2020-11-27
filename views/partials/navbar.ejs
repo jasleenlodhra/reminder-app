@@ -9,18 +9,38 @@
       <% if (locals.page == 'create') { %>
         <a class="nav-item nav-link" href="/reminders">Reminder List</a>
         <a class="nav-item nav-link active" href="/reminder/new">Create</a>
+        <a class="nav-item nav-link" href="/reminder/friends">Add Friends</a>
+        <a class="nav-item nav-link" href="/reminder/updateFriend">Friends List</a>
+
+        <% } else if (locals.page == 'addFriend') { %>
+          <a class="nav-item nav-link" href="/reminders">Reminder List</a>
+          <a class="nav-item nav-link" href="/reminder/new">Create</a>
+          <a class="nav-item nav-link active" href="/reminder/friends">Add Friends</a>
+          <a class="nav-item nav-link" href="/reminder/updateFriend">Friends List</a>
+
+        <% } else if (locals.page == 'friends') { %>
+          <a class="nav-item nav-link" href="/reminders">Reminder List</a>
+          <a class="nav-item nav-link" href="/reminder/new">Create</a>
+          <a class="nav-item nav-link" href="/reminder/friends">Add Friends</a>
+          <a class="nav-item nav-link active" href="/reminder/updateFriend">Friends List</a>
 
       <% } else if (locals.page == 'register') { %>
         <a hidden class="nav-item nav-link" href="/reminders">Reminder List</a>
         <a hidden class="nav-item nav-link" href="/reminder/new">Create</a>
+        <a hidden class="nav-item nav-link" href="/reminder/friends">Add Friends</a>
+        <a hidden class="nav-item nav-link" href="/reminder/updateFriend">Friends List</a>
 
       <% } else if (locals.page == 'login'){ %>
         <a hidden class="nav-item nav-link" href="/reminders">Reminder List</a>
         <a hidden class="nav-item nav-link" href="/reminder/new">Create</a>
+        <a hidden class="nav-item nav-link" href="/reminder/friends">Add Friends</a>
+        <a hidden class="nav-item nav-link" href="/reminder/updateFriend">Friends List</a>
 
       <% } else { %>
         <a class="nav-item nav-link active" href="/reminders">Reminder List</a>
         <a class="nav-item nav-link" href="/reminder/new">Create</a>
+        <a class="nav-item nav-link" href="/reminder/friends">Add Friends</a>
+        <a class="nav-item nav-link" href="/reminder/updateFriend">Friends List</a>
       <% } %>
 
     </div>
