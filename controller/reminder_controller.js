@@ -4,13 +4,13 @@ let remindersController = {
   // Show a list of reminders
   list: (req, res) => {
     let username = req.session.user
-    res.render('reminder/index', {reminders: database[username].reminders})
+    res.render('reminder/index', { reminders: database[username].reminders })
   },
 
   // Add a Friends Page
   addFriendsPage: (req, res) => {
     let allUsers = Object.keys(database)
-    res.render("reminder/friends", {allUsers});
+    res.render("reminder/friends", { allUsers });
   },
 
   // Add Friend
@@ -21,27 +21,21 @@ let remindersController = {
     console.log(friend);
     // Insert into currently logged user's friends array
     database[username].friends.push(friend);
-    res.render("reminder/addFriend", {friendList: database[username].friends})
+    res.render("reminder/addFriend", { friendList: database[username].friends })
     // res.redirect('/reminder/' + reminderToFind)
   },
 
-  // Add a Friends Page
-  addFriendsPage: (req, res) => {
-    let allUsers = Object.keys(database)
-    res.render("reminder/friends", {allUsers});
-  },
-
-  // Add Friend
-  addFriend: (req, res) => {
-    console.log(req.query);
-    let friend = req.query.username;
-    console.log(friend);
-    // Insert into currently logged user's friends array
-    database.cindy.friends.push(friend);
-    console.log(database) // noice
-    res.render("reminder/addFriend", { friendList: database.cindy.friends})
-    // res.redirect('/reminder/' + reminderToFind)
-  },
+  // // Add Friend
+  // addFriend: (req, res) => {
+  //   console.log(req.query);
+  //   let friend = req.query.username;
+  //   console.log(friend);
+  //   // Insert into currently logged user's friends array
+  //   database.cindy.friends.push(friend);
+  //   console.log(database) // noice
+  //   res.render("reminder/addFriend", { friendList: database.cindy.friends})
+  //   // res.redirect('/reminder/' + reminderToFind)
+  // },
 
   // Show a Create Reminder Page
   new: (req, res) => {
