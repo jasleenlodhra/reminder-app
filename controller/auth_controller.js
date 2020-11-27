@@ -12,30 +12,24 @@ let authController = {
     },
 
     loginSubmit: (req, res) => {
-        console.log(req.body.username)
-        console.log(req.body)
-        console.log(database[req.body.username])
-        if (database[req.body.username] && database[req.body.username].password === req.body.password) {
-           req.session['user'] = req.body.username;
-           res.redirect("/reminders")
-       } else {
-           res.send("incorrect username or password")
-       }
+        let username = req.body.username.split("@")[0]
+        if (database[username] && database[username].password === req.body.password) {
+            req.session['user'] = username;
+            res.redirect("/reminders")
+        } else {
+            res.send("incorrect username or password")
+        }
     },
 
     registerSubmit: (req, res) => {
+        let username = req.body.username.split("@")[0]
         if (req.body.username && req.body.password) {
-            database[req.body.username] = {username: req.body.username, password: req.body.password, tags: null, reminders: []}
-
-            console.log(database)
-            console.log(req.body.username)
-
-            req.session['user'] = req.body.username;
-            res.redirect("/login")
-        } else {
-            res.status(400)
-            res.send("invalid user")
-        }
+            database[username] = {username: username, password: req.body.password, reminders: []}
+            req.session['user'] = username;
+            res.redirect("/reminders")       
+       } else {
+           res.send("incorrect username or password")
+       }
 
     }
 }

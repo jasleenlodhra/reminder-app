@@ -28,7 +28,7 @@ app.get("/reminder/friends", reminderController.addFriendsPage)
 app.get("/addFriend", reminderController.addFriend)
 // app.get("/removeFriend", reminderController.removeFriend)
 
-app.get("/reminders", reminderController.list)
+app.get("/reminders", authCheck,reminderController.list)
 
 // Create a Reminder
 app.get("/reminder/new", reminderController.new)
