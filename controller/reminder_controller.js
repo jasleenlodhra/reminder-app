@@ -37,6 +37,20 @@ let remindersController = {
     res.render("reminder/updateFriend", { friendList: database.cindy.friends})
   },
 
+  // // Delete a Friend
+  // deleteFriend: (req, res) => {
+  //   let username = req.session.user
+  //   console.log(req.query);
+  //   let friendToFind = req.query.username;
+  //   let searchResult = database[username].friendList.find(function (friend){
+  //     return friendList.id == friendToFind;
+  //   })
+  //   let removeIndex = database[username].friendList.map(function (item) {
+  //     return item.id
+  //   }).indexOf(searchResult.id);
+  //   database[username].friends.splice(removeIndex, 1)
+  //   res.redirect('reminders/addFriend');
+
   // Remove Friend
   removeFriend: (req, res) => {
       // let username = req.session.user
