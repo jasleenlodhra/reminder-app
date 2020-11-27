@@ -16,28 +16,22 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ed71a9-23d6-4523-b73d-83d18e6cf86c" name="Default Changelist" comment="Fixed login feature and dynamic reminders">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reminder-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reminder-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/auth_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/reminder_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/reminder_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/register.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/navbar.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/reminder/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/reminder/create.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/reminder/edit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/reminder/edit.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/reminder/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/reminder/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/reminder/single-reminder.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/reminder/single-reminder.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +39,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1kDYEdmqPr7kh1lyZnzzk1WIGpx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -62,7 +69,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -90,8 +100,17 @@
       <workItem from="1605557701279" duration="1944000" />
       <workItem from="1605559803382" duration="643000" />
       <workItem from="1606421456105" duration="385000" />
-      <workItem from="1606421897654" duration="1411000" />
+      <workItem from="1606421897654" duration="1975000" />
+      <workItem from="1606449675060" duration="2044000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed login feature and dynamic reminders">
+      <created>1606423530987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606423530987</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,7 +121,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -114,34 +145,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed login feature and dynamic reminders" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1606422883826">
+    <state x="87" y="74" width="2376" height="1216" key="DiffContextDialog" timestamp="1606423671101">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="87" y="74" width="2376" height="1216" key="DiffContextDialog/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606423671101" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1606451010467">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513392" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576725" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606422883826" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1606422883826">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606451010467" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1606451010467">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513391" />
     <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576722" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606422883826" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1606422883826">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606451010467" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1606451010467">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513391" />
     <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576721" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606422883826" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1606422883826">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606451010467" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1606451010467">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/-264.-1057.1920.1057@0.0.1440.900" timestamp="1605239513392" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/-264.-1080.1920.1080@0.0.1440.900" timestamp="1605236576724" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606422883826" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1606423110220">
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606451010467" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1606423659528">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606423110220" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606423659528" />
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606449725133">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/-3840.-557.2560.1359@0.0.2560.1400" timestamp="1606449725133" />
     <state x="420" y="170" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605239508208">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

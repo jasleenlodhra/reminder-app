@@ -25,9 +25,6 @@ let authController = {
         let username = req.body.username.split("@")[0]
         if (req.body.username && req.body.password) {
             database[username] = {username: username, password: req.body.password, reminders: []}
-
-            console.log(database)
-
             req.session['user'] = username;
             res.redirect("/reminders")
         } else {

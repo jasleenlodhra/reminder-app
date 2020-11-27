@@ -21,7 +21,6 @@ let remindersController = {
     console.log(friend);
     // Insert into currently logged user's friends array
     database[username].friends.push(friend);
-    console.log(database) // noice
     res.render("reminder/addFriend", {friendList: database[username].friends})
     // res.redirect('/reminder/' + reminderToFind)
   },
@@ -58,6 +57,8 @@ let remindersController = {
       completed: false
     }
     database[username].reminders.push(reminder);
+    console.log(database)
+    console.log(database[username].reminders)
     res.locals.page = 'reminder list'
     res.redirect('/reminders');
   },

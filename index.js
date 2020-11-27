@@ -28,7 +28,7 @@ app.get("/reminder/friends", reminderController.addFriendsPage)
 app.get("/addFriend", reminderController.addFriend)
 // app.get("/removeFriend", reminderController.removeFriend)
 
-app.get("/reminders", reminderController.list)
+app.get("/reminders", authCheck,reminderController.list)
 
 // Create a Reminder
 app.get("/reminder/new", reminderController.new)
@@ -38,7 +38,7 @@ app.post("/reminder/", reminderController.create)
 app.get("/reminder/:id", reminderController.listOne)
 
 // Edit a reminder
-app.get("/reminder/:id/edit", reminderController.edit) // Show the page to edit a reminder
+app.get("/reminder/:id/edit", reminderController.edit)
 app.post("/reminder/update/:id", reminderController.update) // Edit the reminder
 
 // Delete a reminder
