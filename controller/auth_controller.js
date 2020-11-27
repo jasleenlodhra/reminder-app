@@ -8,7 +8,10 @@ let authController = {
 
     register: (req, res) => {
         res.locals.page = "register"
-        res.render('auth/register')
+        let userData = {
+            user: req.body.username 
+        }
+        res.render('auth/register', { username: userData })
     },
 
     loginSubmit: (req, res) => {
