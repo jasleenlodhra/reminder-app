@@ -8,34 +8,47 @@ let remindersController = {
   },
 
   // Add a Friends Page
-  addFriendsPage: (req, res) => {
+  updateFriendsPage: (req, res) => {
+    res.locals.page = 'addFriend'
     let allUsers = Object.keys(database)
     res.render("reminder/friends", { allUsers });
   },
 
   // Add Friend
-  addFriend: (req, res) => {
-    let username = req.session.user
-    console.log(req.query);
-    let friend = req.query.username;
-    console.log(friend);
-    // Insert into currently logged user's friends array
-    database[username].friends.push(friend);
-    res.render("reminder/addFriend", { friendList: database[username].friends })
-    // res.redirect('/reminder/' + reminderToFind)
-  },
-
-  // // Add Friend
   // addFriend: (req, res) => {
+  //   let username = req.session.user
   //   console.log(req.query);
   //   let friend = req.query.username;
   //   console.log(friend);
   //   // Insert into currently logged user's friends array
-  //   database.cindy.friends.push(friend);
-  //   console.log(database) // noice
-  //   res.render("reminder/addFriend", { friendList: database.cindy.friends})
-  //   // res.redirect('/reminder/' + reminderToFind)
+  //   database[username].friends.push(friend);
+  //   res.render("reminder/updateFriend", { friendList: database[username].friends })
   // },
+
+  // Add Friend
+  addFriend: (req, res) => {
+    res.locals.page = 'friends'
+    console.log(req.query);
+    let friend = req.query.username;
+    console.log(friend);
+    // Insert into currently logged user's friends array
+    database.cindy.friends.push(friend);
+    console.log(database) // noice
+    res.render("reminder/updateFriend", { friendList: database.cindy.friends})
+  },
+
+  // Remove Friend
+  removeFriend: (req, res) => {
+      // let username = req.session.user
+      let friend = req.query.username;
+
+      for (let i=0; i<database.cindy.friends.length; i++){
+        if (database.cindy.friends.length[i] === friend){
+          database.cindy.friends.splice(i,1)
+        }
+      }
+      res.redirect('reminders/updateFriend', { friendList: database.cindy.friends});
+  },
 
   // Show a Create Reminder Page
   new: (req, res) => {
