@@ -25,6 +25,24 @@ let remindersController = {
     // res.redirect('/reminder/' + reminderToFind)
   },
 
+  // Add a Friends Page
+  addFriendsPage: (req, res) => {
+    let allUsers = Object.keys(database)
+    res.render("reminder/friends", {allUsers});
+  },
+
+  // Add Friend
+  addFriend: (req, res) => {
+    console.log(req.query);
+    let friend = req.query.username;
+    console.log(friend);
+    // Insert into currently logged user's friends array
+    database.cindy.friends.push(friend);
+    console.log(database) // noice
+    res.render("reminder/addFriend", { friendList: database.cindy.friends})
+    // res.redirect('/reminder/' + reminderToFind)
+  },
+
   // Show a Create Reminder Page
   new: (req, res) => {
     res.locals.page = 'create';
@@ -59,6 +77,10 @@ let remindersController = {
     database[username].reminders.push(reminder);
     console.log(database)
     console.log(database[username].reminders)
+      subtasks: req.body.subtasks,
+      completed: false
+    }
+    database.cindy.reminders.push(reminder);
     res.locals.page = 'reminder list'
     res.redirect('/reminders');
   },
@@ -92,6 +114,7 @@ let remindersController = {
       title: req.body.title,
       description: req.body.description,
       tags: req.body.tags.split(","),
+      subtasks: req.body.subtasks.split(","),
       completed: req.body.completed == "true"
     }
     database[username].reminders.push(reminder);

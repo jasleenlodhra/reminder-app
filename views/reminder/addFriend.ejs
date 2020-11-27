@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="page-header">Friends</h1>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h3><strong><% friendList.forEach(function (friend) { %> </strong></h3>
+        <p><%= friend %></p>
+        <% }) %>
+      </li>
+    </ul>
+</div>
+<!-- <div>
+    <form method="GET" action="/removeFriend">
+        <input placeholder="Enter a username" type="text" name="username"/>
+        <input type="submit" value="Remove Friend" class="btn btn-secondary"/>
+    </form>
+</div> -->

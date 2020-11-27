@@ -1,16 +1,24 @@
 <div class="container">
+  <h1 class="page-header">Create a Reminder</h1>
   <form action="/reminder" method="POST">
+
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" class="form-control" id="titleInput" placeholder="Title" name="title">
+      <input type="text" class="form-control" id="titleInput" placeholder="E.g. Go Grocery Shopping" name="title">
     </div>
+
     <div class="form-group">
       <label for="description">Description</label>
-      <textarea class="form-control" id="descriptionInput" rows="3" placeholder="Description" name="description"></textarea>
+      <textarea class="form-control" id="descriptionInput" rows="3" placeholder="E.g. Grocery Shopping" name="description"></textarea>
     </div>
-    <div>
+    <div class="form-group">
       <label for="tags">Tags</label>
-      <input class="form-control" type="text" id="tagsInput" placeholder="E.g. food, shopping" name="tags">
+      <input class="form-control" type="text" id="tagsInput" placeholder="E.g. #food, #shopping"  name="tags">
+    </div>
+
+    <div>
+      <label for="subtasks">Subtasks</label>
+      <input class="form-control" type="text" id="subtasksInput" placeholder="E.g. Buy apples, Buy bananas" name="subtasks">
     </div>
     <div style=clear:both;>
     </div>

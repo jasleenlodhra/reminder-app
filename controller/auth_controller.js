@@ -26,11 +26,10 @@ let authController = {
         if (req.body.username && req.body.password) {
             database[username] = {username: username, password: req.body.password, reminders: []}
             req.session['user'] = username;
-            res.redirect("/reminders")
-        } else {
-            res.status(400)
-            res.send("invalid user")
-        }
+            res.redirect("/reminders")       
+       } else {
+           res.send("incorrect username or password")
+       }
 
     }
 }
