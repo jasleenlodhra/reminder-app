@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4ed71a9-23d6-4523-b73d-83d18e6cf86c" name="Default Changelist" comment="Fixed login feature and dynamic reminders">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth_functions/authcheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth_functions/authcheck.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +113,7 @@
       <workItem from="1606325477795" duration="1495000" />
       <workItem from="1606412743528" duration="13843000" />
       <workItem from="1606450321387" duration="103000" />
+      <workItem from="1606510899342" duration="7072000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed login feature and dynamic reminders">
       <created>1606423530987</created>
