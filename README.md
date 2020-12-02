@@ -7,6 +7,7 @@ Mariah Mirzayan A01179440
 Use the package manager npm to install dependencies
 
 ```git clone https://github.com/jasleenlodhra/reminder-app.git```
+
 In the terminal, run
  ```npm install```
 
