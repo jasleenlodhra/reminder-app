@@ -1,6 +1,8 @@
 ## Group Members
 Jasleen Lodhra A01208987
+
 Sajjin Nijjar A01055657
+
 Mariah Mirzayan A01179440
 
 ## Installation
